@@ -28,7 +28,9 @@ When a conversation is compressed and continued, **you must re-read this file**,
 
 Do not rely on summaries of these instructions — always read the source. The full instructions contain nuance that summaries lose.
 
-If you've already read the instructions in this session (without being asked), let the human know briefly: "Already up to date on the framework instructions."
+If you've already read the instructions in this session (without being asked) and you're about to read them again unprompted, let the human know briefly: "Already up to date on the framework instructions."
+
+If the human explicitly asks you to read the instructions, always do so — they may have updated the framework.
 
 ---
 

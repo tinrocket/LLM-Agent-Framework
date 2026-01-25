@@ -111,8 +111,10 @@ By the end of setup, the framework should reflect the project's current state �
     ├── Shared/                           ← Shared resources across all Agents
     │   ├── INSTRUCTIONS - Shared.md      ← Universal guidelines for all Agents
     │   ├── PROJECT BRIEF.md              ← Current project context and goals
-    │   └── Setup/
-    │       └── config.json               ← Framework configuration
+    │   ├── Setup/
+    │   │   └── config.json               ← Framework configuration
+    │   └── Handoff/                       ← Session handoff files
+    │       └── Archive/                   ← Consumed handoffs
     └── [Agent Name]/
         ├── GUIDING PRINCIPLES - [Agent Name].md  ← Immutable role, skills, guidelines
         ├── PROJECT INSTRUCTIONS - [Agent Name].md ← Living project-specific notes
@@ -225,6 +227,7 @@ To add a new Agent:
 - [ ] Read INSTRUCTIONS - Claude.md (this file)
 - [ ] Read /Agents/Shared/INSTRUCTIONS - Shared.md
 - [ ] Read /Agents/Shared/PROJECT BRIEF.md
+- [ ] **Check /Agents/Shared/Handoff/ for handoff files**
 - [ ] Identify which Agent(s) to work as
 - [ ] Read Agent's GUIDING PRINCIPLES - [Agent Name].md
 - [ ] Read Agent's PROJECT INSTRUCTIONS - [Agent Name].md
@@ -236,4 +239,48 @@ To add a new Agent:
 
 ---
 
-*Last updated: 2026-01-24*
+## Handoff System
+
+When a session becomes slow, buggy, or needs to be handed off to a fresh instance, create a handoff file.
+
+### Creating a Handoff
+
+When the human asks to create a handoff (or you recognize the session is degrading), create a file in `/Agents/Shared/Handoff/` named `YYYY-MM-DD_handoff.md`:
+
+```markdown
+# Handoff - [Date]
+
+## Current Status
+[What was being worked on when the session ended]
+
+## Active Agent(s)
+[Which agent(s) were in use]
+
+## Recent Decisions
+[Key decisions made this session that aren't yet in PROJECT INSTRUCTIONS]
+
+## In Progress
+[Work that was started but not completed]
+
+## Open Questions / Blockers
+[Anything unresolved]
+
+## Next Steps
+[What should happen next]
+
+## Context the Next Session Needs
+[Anything else important — environment issues, human preferences expressed, etc.]
+```
+
+### Reading a Handoff
+
+At session start, check `/Agents/Shared/Handoff/` for handoff files. If found:
+1. Read the most recent handoff
+2. Summarize it briefly to the human
+3. Ask: "Continue from this handoff, or start fresh?"
+4. If continuing, pick up where the previous session left off
+5. Once the handoff is consumed, move it to `/Agents/Shared/Handoff/Archive/`
+
+---
+
+*Last updated: 2026-01-25*

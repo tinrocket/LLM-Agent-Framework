@@ -51,6 +51,14 @@ Ask Claude to read the Agent Framework instructions. It will:
 - One thing at a time — new requests get queued, not started immediately
 - Institutional knowledge — patterns and preferences get documented for future sessions
 
+## Session Handoff
+
+**When a session gets slow, buggy, or glitchy** — ask Claude to create a handoff. This saves the current state (what was being worked on, recent decisions, next steps) to a file that the next session will pick up automatically.
+
+Just say: *"Create a handoff"*
+
+The next Claude instance will read the handoff, summarize it, and ask if you want to continue from there. No context lost.
+
 ## Structure
 
 ```

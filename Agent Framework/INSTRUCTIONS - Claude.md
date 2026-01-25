@@ -128,7 +128,7 @@ By the end of setup, the framework should reflect the project's current state �
 
 Each Agent has two instruction files:
 
-- **GUIDING PRINCIPLES** — Immutable. Defines the Agent's role, skills, and core guidelines. Only changes when the framework itself evolves.
+- **GUIDING PRINCIPLES** — Immutable by default. Defines the Agent's role, skills, and core guidelines. Can be changed at the human's explicit request.
 - **PROJECT INSTRUCTIONS** — Living document. Captures project-specific conventions, decisions, and learnings. Update this as you work.
 
 ---

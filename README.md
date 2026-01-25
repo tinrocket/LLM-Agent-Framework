@@ -27,7 +27,10 @@ Core agents include **Developer** and **Project Manager**, with optional agents 
 ## Installation
 
 1. Copy the `Agent Framework` folder into your project
-2. Point Claude at `INSTRUCTIONS - Claude.md` at the start of a session
+2. At the start of a session, tell Claude:
+
+   > Please read "Agent Framework/INSTRUCTIONS - Claude.md"
+
 3. Claude will detect it's a fresh setup and walk you through configuration
 
 That's it. The framework lives in your project folder and persists between sessions.

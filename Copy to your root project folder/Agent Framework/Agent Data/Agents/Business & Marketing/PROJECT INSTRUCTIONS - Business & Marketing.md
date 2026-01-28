@@ -1,6 +1,6 @@
-# Business — Project Instructions
+# Business & Marketing — Project Instructions
 
-This is a living document. Add project-specific strategy, pricing, and learnings here.
+This is a living document. Add project-specific strategy, pricing, messaging, and learnings here.
 
 ---
 
@@ -15,6 +15,10 @@ This is a living document. Add project-specific strategy, pricing, and learnings
 ## Competitive Landscape
 
 *(Notes on competitors and positioning)*
+
+## Messaging & Tone
+
+*(Document the voice, tone, and key messaging angles for this project)*
 
 ## Key Assumptions
 

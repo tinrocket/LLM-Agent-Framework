@@ -13,6 +13,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Entry point renamed from `INSTRUCTIONS - Claude.md` to `CLAUDE.md`
 - Updating now requires only replacing `Agent Framework/` folder — no merging
 - `Agent Data` template included inside `Agent Framework/` for easy first-time setup
+- Renamed Business agent to Business & Marketing with expanded messaging responsibilities
+- Added multi-agent consultation guidance to Project Manager
+
+### Added
+- README screenshot showing PM coordinating with Marketing, Writer, and Developer
 
 ### Removed
 - `Setup/config.json` — framework now detects installation by checking if `Agent Data/` exists at project root

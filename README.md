@@ -3,7 +3,7 @@
 **Developed by:** John Balestrieri, [Tinrocket, LLC](https://www.tinrocket.com)
 **License:** MIT
 
-A structured framework for working with Claude and other LLMs on complex, multi-session projects.
+A structured framework for working with Claude on complex, multi-session projects.
 
 ## Why This Exists
 
@@ -15,18 +15,24 @@ The Agent Framework solves this by giving Claude a clear structure to operate wi
 
 The framework organizes work through **Agents** — specialized roles Claude can assume to focus on specific tasks. Each Agent has:
 
-- **Guiding Principles** — immutable rules defining the role (in Agent Framework)
-- **Project Instructions** — living document for project-specific notes and learnings (in Agent Data)
-- **TODO list** — persistent task tracking (in Agent Data)
-- **Reports** — documentation of significant work (in Agent Data)
+- **Guiding Principles** — immutable rules defining the role
+- **Project Instructions** — living document for project-specific notes and learnings
+- **TODO list** — persistent task tracking
+- **Reports** — documentation of significant work
+
+**Framework and data are kept separate.** The `Agent Framework/` folder contains the framework itself — replace it entirely when updating. The `Agent Data/` folder contains your project-specific data — it stays untouched during updates.
 
 Core agents include **Developer** and **Project Manager**, with optional agents for QA, Writing, Design, and more.
 
 **Production-tested agents:** Developer, Project Manager, Writer, Game & Interaction Designer, QA, Testers. The remaining agents have been fleshed out for completeness but haven't seen production use yet.
 
+*Example: The PM coordinates with Marketing, Writer, and Developer on improving an upgrade screen (Claude Cowork)*
+
+![Example: PM coordinating with Marketing, Writer, and Developer on an upgrade screen](images/agent_example.png)
+
 ## Installation
 
-1. Copy the contents of `Copy to the root of your project folder/` into your project
+1. Copy the contents of `Copy to your root project folder/` into your project
 2. Copy `Agent Data` from inside `Agent Framework/` to your project root
 3. At the start of a session, tell Claude:
 
@@ -97,7 +103,7 @@ The next Claude instance will read the handoff, summarize it, and ask if you wan
 
 ## Requirements
 
-- Claude (Anthropic) — tested with Claude 4
+- Claude Cowork (tested) — may work with other Claude interfaces
 - A project folder Claude can access
 
 ## Contributing

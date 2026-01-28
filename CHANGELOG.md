@@ -9,9 +9,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 - Restructured folder layout to separate framework files from user data
 - Framework files now in `Agent Framework/` (GUIDING PRINCIPLES, shared instructions)
-- User data now in `Agent Data/` (PROJECT INSTRUCTIONS, TODOs, Reports, config)
+- User data now in `Agent Data/` (PROJECT BRIEF, PROJECT INSTRUCTIONS, TODOs, Reports, Handoff)
 - Entry point renamed from `INSTRUCTIONS - Claude.md` to `CLAUDE.md`
 - Updating now requires only replacing `Agent Framework/` folder — no merging
+- `Agent Data` template included inside `Agent Framework/` for easy first-time setup
+
+### Removed
+- `Setup/config.json` — framework now detects installation by checking if `Agent Data/` exists at project root
 
 ### Migration
 - See UPGRADING.md for migration steps from v1.0.x

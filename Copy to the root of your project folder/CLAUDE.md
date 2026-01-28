@@ -4,7 +4,9 @@ Read this file first. Don't summarize it back — just follow it.
 
 ## Quick Start
 
-1. Check `/Agent Data/Setup/config.json` — if missing or `setupComplete: false`, run setup (see below)
+1. Check if `/Agent Data/` exists at the project root
+   - **If missing:** This is a fresh install. Copy `Agent Data` from inside `Agent Framework` to the project root, then run setup (see below)
+   - **If present:** Framework is installed. Continue to step 2
 2. Read `/Agent Framework/INSTRUCTIONS - Shared.md`
 3. Read `/Agent Data/PROJECT BRIEF.md`
 4. Check `/Agent Data/Handoff/` for handoff files
@@ -32,25 +34,28 @@ This framework organizes work through **Agents** — specialized roles with thei
 
 ## First-Time Setup
 
-**Check `/Agent Data/Setup/config.json`.** If missing or `setupComplete: false`, the framework needs configuration.
+**Check if `/Agent Data/` exists at the project root.** If missing, the framework needs installation.
 
-### Before Starting Fresh
+### Installation
 
-Check if project data already exists:
-- Does `PROJECT BRIEF.md` have content beyond the template?
-- Do any TODO files have tasks?
-- Do any PROJECT INSTRUCTIONS files have project-specific content?
-
-**If data exists but `setupComplete: false`:** Ask the human whether to integrate existing content or start fresh.
+1. Copy the `Agent Data` folder from inside `Agent Framework` to the project root
+2. Your structure should now be:
+   ```
+   /[Project]/
+   ├── CLAUDE.md
+   ├── Agent Framework/
+   └── Agent Data/        ← Copied here
+   ```
 
 ### Setup Steps
+
+Once Agent Data is in place:
 
 1. **Understand the project** — What are we building? What phase? Current documentation state?
 2. **Identify relevant agents** — Check `/Agent Framework/Agents/` for available agents. Which does this project need?
 3. **Review existing documentation** — Convert existing TODOs, specs, style guides into framework files
 4. **Populate the framework** — Fill PROJECT BRIEF, add tasks to TODOs, capture conventions
 5. **Confirm with the human** — Review what was captured, ask what's missing
-6. **Update config.json** — Set `setupComplete: true`
 
 ---
 
@@ -62,14 +67,13 @@ Check if project data already exists:
 │
 ├── Agent Framework/                        ← FRAMEWORK FILES (replace on update)
 │   ├── INSTRUCTIONS - Shared.md            ← Universal guidelines
-│   └── Agents/
-│       └── [Agent Name]/
-│           └── GUIDING PRINCIPLES - [Agent].md  ← Immutable role definition
+│   ├── Agents/
+│   │   └── [Agent Name]/
+│   │       └── GUIDING PRINCIPLES - [Agent].md
+│   └── Agent Data/                         ← Template (ignore if /Agent Data/ exists at root)
 │
 └── Agent Data/                             ← USER DATA (preserved on update)
     ├── PROJECT BRIEF.md                    ← Project context
-    ├── Setup/
-    │   └── config.json                     ← Framework config
     ├── Handoff/
     │   └── Archive/
     └── Agents/
@@ -80,10 +84,11 @@ Check if project data already exists:
                 └── Archive/
 ```
 
-### Agent Instruction Files
+### Where to Find Agent Files
 
-- **GUIDING PRINCIPLES** (in Agent Framework) — Immutable. Defines role, skills, core guidelines. Change only at human's explicit request.
-- **PROJECT INSTRUCTIONS** (in Agent Data) — Living document. Update as you work with project-specific conventions and learnings.
+- **GUIDING PRINCIPLES** → `/Agent Framework/Agents/[Agent]/` — Immutable role definition
+- **PROJECT INSTRUCTIONS** → `/Agent Data/Agents/[Agent]/` — Living project notes
+- **TODO** → `/Agent Data/Agents/[Agent]/` — Active tasks
 
 ### Updating the Framework
 
@@ -91,6 +96,8 @@ To update to a new version:
 1. Delete the `/Agent Framework/` folder
 2. Copy in the new `/Agent Framework/` folder
 3. Done — your `/Agent Data/` is untouched
+
+The `Agent Data` template inside `Agent Framework` is ignored when `/Agent Data/` already exists at root.
 
 ---
 

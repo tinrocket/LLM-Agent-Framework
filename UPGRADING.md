@@ -20,7 +20,6 @@ The `Agent Framework/` folder contains:
 
 The `Agent Data/` folder contains your project-specific data:
 - `PROJECT BRIEF.md`
-- `Setup/config.json`
 - `Handoff/` folder
 - `Agents/[Agent Name]/PROJECT INSTRUCTIONS - [Agent Name].md`
 - `Agents/[Agent Name]/TODO - [Agent Name].md`
@@ -46,13 +45,12 @@ Delete the agent's folder from both:
 If you're upgrading from the old single-folder structure:
 
 1. Back up your project folder
-2. Your old structure had everything in `Agent Framework/Agents/`
-3. Move your user data files to the new `Agent Data/` structure:
-   - `PROJECT BRIEF.md` → `Agent Data/`
-   - `Setup/` → `Agent Data/Setup/`
-   - `Handoff/` → `Agent Data/Handoff/`
-   - `PROJECT INSTRUCTIONS - *.md` → `Agent Data/Agents/[Agent]/`
-   - `TODO - *.md` → `Agent Data/Agents/[Agent]/`
-   - `Reports/` → `Agent Data/Agents/[Agent]/Reports/`
-4. Delete the old `Agent Framework/` folder
-5. Copy in the new `Agent Framework/` folder
+2. Copy `Agent Data` from inside the new `Agent Framework/` to your project root
+3. Move your user data from the old structure into `Agent Data/`:
+   - `Agents/Shared/PROJECT BRIEF.md` → `Agent Data/`
+   - `Agents/Shared/Handoff/` → `Agent Data/Handoff/`
+   - `Agents/[Agent]/PROJECT INSTRUCTIONS - *.md` → `Agent Data/Agents/[Agent]/`
+   - `Agents/[Agent]/TODO - *.md` → `Agent Data/Agents/[Agent]/`
+   - `Agents/[Agent]/Reports/` → `Agent Data/Agents/[Agent]/Reports/`
+4. Delete the old `Agent Framework/` folder (and old `INSTRUCTIONS - Claude.md` if present)
+5. Copy in the new `Agent Framework/` and `CLAUDE.md`

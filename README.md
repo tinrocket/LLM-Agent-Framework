@@ -26,12 +26,13 @@ Core agents include **Developer** and **Project Manager**, with optional agents 
 
 ## Installation
 
-1. Copy `CLAUDE.md`, `Agent Framework/`, and `Agent Data/` into your project folder
-2. At the start of a session, tell Claude:
+1. Copy the contents of `Copy to the root of your project folder/` into your project
+2. Copy `Agent Data` from inside `Agent Framework/` to your project root
+3. At the start of a session, tell Claude:
 
    > Please read "CLAUDE.md"
 
-3. Claude will detect it's a fresh setup and walk you through configuration
+4. Claude will walk you through configuration
 
 That's it. The framework lives in your project folder and persists between sessions.
 
@@ -79,13 +80,13 @@ The next Claude instance will read the handoff, summarize it, and ask if you wan
 │
 ├── Agent Framework/                    ← FRAMEWORK (replace on update)
 │   ├── INSTRUCTIONS - Shared.md
-│   └── Agents/
-│       └── [Agent Name]/
-│           └── GUIDING PRINCIPLES - [Agent].md
+│   ├── Agents/
+│   │   └── [Agent Name]/
+│   │       └── GUIDING PRINCIPLES - [Agent].md
+│   └── Agent Data/                     ← Template (copy to root on first install)
 │
 └── Agent Data/                         ← YOUR DATA (preserved on update)
     ├── PROJECT BRIEF.md
-    ├── Setup/config.json
     ├── Handoff/
     └── Agents/
         └── [Agent Name]/

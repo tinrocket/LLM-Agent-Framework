@@ -106,6 +106,14 @@ The next Claude instance will read the handoff, summarize it, and ask if you wan
 - Claude Cowork (tested) — may work with other Claude interfaces
 - A project folder Claude can access
 
+## Why Not AGENTS.md?
+
+[AGENTS.md](https://agents.md/) is an emerging standard for guiding AI coding agents — focused on build steps, tests, and code conventions. It's great for that purpose.
+
+This framework solves a different problem: **multi-session project collaboration** with persistent state (TODOs, Reports, Handoffs) and coordination between specialized roles you define (Dungeon Master, Copy Editor, Vibe Checker — whatever your project needs).
+
+The two can coexist. Use AGENTS.md for your build/test instructions; use Agent Framework for project coordination.
+
 ## Contributing
 
 Pull requests and ideas welcome at [github.com/tinrocket/LLM-Agent-Framework](https://github.com/tinrocket/LLM-Agent-Framework)

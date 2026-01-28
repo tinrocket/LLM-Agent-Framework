@@ -28,7 +28,7 @@ Core agents include **Developer** and **Project Manager**, with optional agents 
 
 *Example: The PM coordinates with Marketing, Writer, and Developer on improving an upgrade screen (Claude Cowork)*
 
-![Example: PM coordinating with Marketing, Writer, and Developer on an upgrade screen](images/agent_example.png)
+![Example: PM coordinating with Marketing, Writer, and Developer on an upgrade screen](assets/agent_example.png)
 
 ## Installation
 

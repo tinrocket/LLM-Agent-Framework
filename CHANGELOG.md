@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.0] - 2026-01-28
+
+### Changed
+- Restructured folder layout to separate framework files from user data
+- Framework files now in `Agent Framework/` (GUIDING PRINCIPLES, shared instructions)
+- User data now in `Agent Data/` (PROJECT INSTRUCTIONS, TODOs, Reports, config)
+- Entry point renamed from `INSTRUCTIONS - Claude.md` to `CLAUDE.md`
+- Updating now requires only replacing `Agent Framework/` folder — no merging
+
+### Migration
+- See UPGRADING.md for migration steps from v1.0.x
+
 ## [1.0.2] - 2026-01-25
 
 ### Changed

@@ -15,10 +15,10 @@ The Agent Framework solves this by giving Claude a clear structure to operate wi
 
 The framework organizes work through **Agents** — specialized roles Claude can assume to focus on specific tasks. Each Agent has:
 
-- **Guiding Principles** — immutable rules defining the role
-- **Project Instructions** — living document for project-specific notes and learnings
-- **TODO list** — persistent task tracking
-- **Reports** — documentation of significant work
+- **Guiding Principles** — immutable rules defining the role (in Agent Framework)
+- **Project Instructions** — living document for project-specific notes and learnings (in Agent Data)
+- **TODO list** — persistent task tracking (in Agent Data)
+- **Reports** — documentation of significant work (in Agent Data)
 
 Core agents include **Developer** and **Project Manager**, with optional agents for QA, Writing, Design, and more.
 
@@ -26,19 +26,28 @@ Core agents include **Developer** and **Project Manager**, with optional agents 
 
 ## Installation
 
-1. Copy the `Agent Framework` folder into your project
+1. Copy `CLAUDE.md`, `Agent Framework/`, and `Agent Data/` into your project folder
 2. At the start of a session, tell Claude:
 
-   > Please read "Agent Framework/INSTRUCTIONS - Claude.md"
+   > Please read "CLAUDE.md"
 
 3. Claude will detect it's a fresh setup and walk you through configuration
 
 That's it. The framework lives in your project folder and persists between sessions.
 
+## Updating
+
+To update to a new version:
+1. Delete your `Agent Framework/` folder
+2. Copy in the new `Agent Framework/` folder
+3. Done — your `Agent Data/` stays intact
+
+No merging required. Your project data is separate from the framework files.
+
 ## Usage
 
 **Starting a session:**
-Ask Claude to read the Agent Framework instructions. It will:
+Ask Claude to read CLAUDE.md. It will:
 - Check if setup is complete
 - Read the project brief and relevant agent instructions
 - Pick up where the last session left off
@@ -65,13 +74,24 @@ The next Claude instance will read the handoff, summarize it, and ask if you wan
 ## Structure
 
 ```
-/Agent Framework/
-├── INSTRUCTIONS - Claude.md      ← Start here
-└── Agents/
-    ├── Shared/                   ← Project brief, shared guidelines
-    ├── Developer/                ← Technical implementation
-    ├── Project Manager/          ← Coordination and tracking
-    └── [Other Agents]/           ← QA, Writer, Designer, etc.
+/[Project]/
+├── CLAUDE.md                           ← Start here
+│
+├── Agent Framework/                    ← FRAMEWORK (replace on update)
+│   ├── INSTRUCTIONS - Shared.md
+│   └── Agents/
+│       └── [Agent Name]/
+│           └── GUIDING PRINCIPLES - [Agent].md
+│
+└── Agent Data/                         ← YOUR DATA (preserved on update)
+    ├── PROJECT BRIEF.md
+    ├── Setup/config.json
+    ├── Handoff/
+    └── Agents/
+        └── [Agent Name]/
+            ├── PROJECT INSTRUCTIONS - [Agent].md
+            ├── TODO - [Agent].md
+            └── Reports/
 ```
 
 ## Requirements
